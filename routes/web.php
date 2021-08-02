@@ -21,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@root')->name('root');
 Auth::routes();
 
+Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
+
 /**邮件相关**/
 Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
 Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
