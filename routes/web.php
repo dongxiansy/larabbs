@@ -30,5 +30,6 @@ Route::post('email/resend', 'Auth\VerificationController@resend')->name('verific
 
 Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
+Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
