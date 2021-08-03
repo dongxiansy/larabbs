@@ -3,35 +3,24 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\Topic;
+use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Support\Facades\Auth;
 
-class TopicPolicy extends Policy
+class LinkPolicy
 {
-    public function update(User $user, Topic $topic)
-    {
-        if(Auth::check() && Auth::user()->can('manage_contents')){
-            return true;
-        } else {
-            return $user->isAuthorOf($topic);
-        }
-    }
+    use HandlesAuthorization;
 
-    public function destroy(User $user, Topic $topic)
+    /**
+     * Create a new policy instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        return $user->isAuthorOf($topic);
+        //
     }
 
     public function viewAny(): bool
-    {
-        if(Auth::check() && Auth::user()->can('manage_contents')){
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public function view(): bool
     {
         if(Auth::check() && Auth::user()->can('manage_contents')){
             return true;
@@ -49,12 +38,39 @@ class TopicPolicy extends Policy
         }
     }
 
-    public function delete(User $user, Topic $topic)
+    public function view(): bool
     {
         if(Auth::check() && Auth::user()->can('manage_contents')){
             return true;
         } else {
-            return $user->isAuthorOf($topic);
+            return false;
+        }
+    }
+
+    public function update()
+    {
+        if(Auth::check() && Auth::user()->can('manage_contents')){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function edit(): bool
+    {
+        if(Auth::check() && Auth::user()->can('manage_contents')){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function delete(): bool
+    {
+        if(Auth::check() && Auth::user()->can('manage_contents')){
+            return true;
+        } else {
+            return false;
         }
     }
 }

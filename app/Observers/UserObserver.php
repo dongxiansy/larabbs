@@ -2,6 +2,7 @@
 
 namespace App\Observers;
 
+use App\Models\Topic;
 use App\Models\User;
 
 // creating, created, updating, updated, saving,

@@ -6,22 +6,29 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "bakerkretzmar/nova-settings-tool": "^1.1",
+        "beyondcode/nova-custom-dashboard-card": "^0.0.1",
+        "coroowicaksono/chart-js-integration": "^0.3.4",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "intervention/image": "^2.6",
         "laravel/framework": "^8.40",
         "laravel/horizon": "~5.6",
+        "laravel/nova": "^3.14",
         "laravel/tinker": "^2.5",
         "mews/captcha": "~3.0",
         "mews/purifier": "~3.3",
+        "optimistdigital/nova-settings": "^3.2",
         "overtrue/laravel-lang": "~4.0",
         "overtrue/pinyin": "~4.0",
         "predis/predis": "~1.1",
         "spatie/laravel-permission": "~3.0",
         "summerblue/administrator": "8.*",
         "summerblue/laravel-active": "8.*",
-        "viacreative/sudo-su": "~1.1"
+        "titasgailius/search-relations": "^2.0",
+        "viacreative/sudo-su": "~1.1",
+        "vyuldashev/nova-permission": "^2.11"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "~3.5",
@@ -34,6 +41,12 @@
         "phpunit/phpunit": "^9.3.3",
         "summerblue/generator": "8.*"
     },
+    "repositories": [
+        {
+            "type": "gitlab",
+            "url": "https://git.papamk.com/public-project/nova"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "App\\": "app/",
