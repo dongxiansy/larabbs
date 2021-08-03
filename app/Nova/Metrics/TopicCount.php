@@ -18,7 +18,7 @@ class TopicCount extends Value
      */
     public function calculate(NovaRequest $request)
     {
-        return $this->count($request, Topic::class);
+        return $this->count($request, Topic::class)->previous(50);
     }
 
     /**

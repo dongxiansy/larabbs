@@ -111,7 +111,10 @@ class Topic extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+            new Filters\TopicType,
+            new Filters\TopicReply,
+        ];
     }
 
     /**
