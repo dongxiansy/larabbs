@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
         $user = User::find(1);
         $user->name = 'Summer';
         $user->email = 'summer@example.com';
-        $user->avatar = 'https://cdn.learnku.com/uploads/images/201710/14/1/ZqM7iaP4CR.png';
+        $user->avatar = 'default.png';
         $user->save();
 
         // 初始化用户角色，将 1 号用户指派为『站长』

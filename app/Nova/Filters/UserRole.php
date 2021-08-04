@@ -5,7 +5,7 @@ namespace App\Nova\Filters;
 use Illuminate\Http\Request;
 use Laravel\Nova\Filters\Filter;
 
-class UserType extends Filter
+class UserRole extends Filter
 {
     /**
      * The filter's component.
@@ -24,7 +24,7 @@ class UserType extends Filter
      */
     public function apply(Request $request, $query, $value)
     {
-        return $query->where('type', $value);
+        return $query;
     }
 
     /**
@@ -35,9 +35,6 @@ class UserType extends Filter
      */
     public function options(Request $request)
     {
-        return [
-            'Administrator' => 'admin',
-            'Editor' => 'editor',
-        ];
+        return [];
     }
 }

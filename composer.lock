@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c50137e4bdd0d85e1eaf4a3718e74e54",
+    "content-hash": "56005707ef3eca42f5cb2bc333cc7c6b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -392,6 +392,60 @@
                 "source": "https://github.com/cakephp/chronos"
             },
             "time": "2021-06-17T13:49:10+00:00"
+        },
+        {
+            "name": "carlson/nova-link-field",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andrewicarlson/nova-link-field.git",
+                "reference": "6e7c1f805ef3b4ab517e2e14e11b96c7dd37b15e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andrewicarlson/nova-link-field/zipball/6e7c1f805ef3b4ab517e2e14e11b96c7dd37b15e",
+                "reference": "6e7c1f805ef3b4ab517e2e14e11b96c7dd37b15e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "component": "package",
+                "laravel": {
+                    "providers": [
+                        "Carlson\\NovaLinkField\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Carlson\\NovaLinkField\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Carlson",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel Nova field for HTML links.",
+            "keywords": [
+                "anchor",
+                "laravel",
+                "link",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/andrewicarlson/nova-link-field/issues",
+                "source": "https://github.com/andrewicarlson/nova-link-field/tree/master"
+            },
+            "time": "2020-02-09T17:14:46+00:00"
         },
         {
             "name": "ckeditor/ckeditor",
@@ -2376,6 +2430,50 @@
                 "source": "https://github.com/laravel/ui/tree/v3.3.0"
             },
             "time": "2021-05-25T16:45:33+00:00"
+        },
+        {
+            "name": "laravelrotebal/nova-router-link",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravelrotebal/nova-router-link.git",
+                "reference": "05df55e02f447e63e2af649ad82407d6952d2085"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravelrotebal/nova-router-link/zipball/05df55e02f447e63e2af649ad82407d6952d2085",
+                "reference": "05df55e02f447e63e2af649ad82407d6952d2085",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Klepak\\NovaRouterLink\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Klepak\\NovaRouterLink\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Adds a field that generates a link using the Nova Router",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "source": "https://github.com/laravelrotebal/nova-router-link/tree/1.1.1"
+            },
+            "time": "2020-01-27T09:06:17+00:00"
         },
         {
             "name": "league/commonmark",
