@@ -19,6 +19,7 @@
         "laravel/nova": "^3.14",
         "laravel/tinker": "^2.5",
         "laravelrotebal/nova-router-link": "^1.1",
+        "llaski/nova-scheduled-jobs": "^4.0",
         "mews/captcha": "~3.0",
         "mews/purifier": "~3.3",
         "optimistdigital/nova-settings": "^3.2",

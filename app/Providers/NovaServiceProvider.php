@@ -18,6 +18,7 @@ use OptimistDigital\NovaSettings\NovaSettings;
 use Beyondcode\CustomDashboardCard\NovaCustomDashboard;
 use Vyuldashev\NovaPermission\NovaPermissionTool;
 use Coroowicaksono\ChartJsIntegration\LineChart;
+use App\Nova\Service\CharService;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -42,21 +43,6 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                 \App\Models\Link::observe(\App\Observers\LinkObserver::class);
                 \App\Models\Reply::observe(\App\Observers\ReplyObserver::class);
             }
-        );
-
-        NovaCustomDashboard::cards(
-            [
-                (new TopicCount)->withMeta(
-                    [
-                        'card-name' => '话题总数'
-                    ]
-                ),
-                (new UserCount)->withMeta(
-                    [
-                        'card-name' => '用户总数'
-                    ]
-                ),
-            ]
         );
     }
 
@@ -85,13 +71,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         Gate::define(
             'viewNova',
             function ($user) {
-//                return $user->hasNovaPermission();
-                return in_array(
-                    $user->email,
-                    [
-                        'dongxiansy@163.com'
-                    ]
-                );
+                return $user->hasNovaPermission();
             }
         );
     }
@@ -103,35 +83,13 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     protected function cards()
     {
+        $charService = new  CharService();
         return [
-            new CustomDashboard,
-//            (new LineChart())
-//                ->title('用户增长趋势')
-//                ->animations([
-//                                 'enabled' => true,
-//                                 'easing' => 'easeinout',
-//                             ])
-//                ->series(array([
-//                    'barPercentage' => 0.5,
-//                    'label' => 'Average Sales',
-//                    'borderColor' => '#f7a35c',
-//                    'data' => [80, 90, 80, 40, 62, 79, 79, 90, 90, 90, 92, 91],
-//                ],[
-//                    'barPercentage' => 0.5,
-//                    'label' => 'Average Sales #2',
-//                    'borderColor' => '#90ed7d',
-//                    'data' => [90, 80, 40, 22, 79, 129, 30, 40, 90, 92, 91, 80],
-//                ]))
-//                ->options([
-//                              'xaxis' => [
-//                                  'categories' => [ 'Jan', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct' ]
-//                              ],
-//                              'legend' => [
-//                                  'display' => true,
-//                                  'position' => 'left',
-//                              ]
-//                          ])
-//                ->width('2/3'),
+//            new CustomDashboard,
+            (new UserCount)->width('1/5'),
+            $charService->getUserWeekChart(),
+            (new TopicCount)->width('1/5'),
+            $charService->getTopicWeekChart(),
         ];
     }
 

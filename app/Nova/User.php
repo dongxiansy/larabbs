@@ -148,6 +148,7 @@ class User extends Resource
         return [
             new Filters\UserCreateStartTime,
             new Filters\UserCreateEndTime,
+            new Filters\UserRole,
         ];
     }
 

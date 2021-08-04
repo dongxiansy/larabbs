@@ -3,6 +3,7 @@
 namespace App\Nova\Metrics;
 
 use App\Models\Topic;
+use App\Models\User;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Metrics\Value;
 

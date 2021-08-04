@@ -19,6 +19,7 @@ class UserCount extends Value
     public function calculate(NovaRequest $request)
     {
         return $this->count($request, User::class)->previous(50);
+//        return $this->result(User::count());
     }
 
     /**

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class ImageUploadHandler
 {
-    protected $allowed_ext = ["png", "jpg", "gif", 'jpeg'];
+    protected $allowed_ext = ["png", "jpg", "gif", 'bmp', 'jpeg'];
 
     public function save($file, $folder, $file_prefix, $max_width = false)
     {
