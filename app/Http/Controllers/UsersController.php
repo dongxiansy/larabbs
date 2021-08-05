@@ -7,6 +7,7 @@ use App\Http\Requests\UserRequest;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\Request;
 use App\Handlers\ImageUploadHandler;
+use Illuminate\Support\Facades\Storage;
 
 class UsersController extends Controller
 {
