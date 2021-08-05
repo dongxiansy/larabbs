@@ -9,6 +9,7 @@
         "bakerkretzmar/nova-settings-tool": "^1.1",
         "beyondcode/nova-custom-dashboard-card": "^0.0.1",
         "carlson/nova-link-field": "^1.1",
+        "coderello/laravel-nova-lang": "^1.7",
         "coroowicaksono/chart-js-integration": "^0.3.4",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",

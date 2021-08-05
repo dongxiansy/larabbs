@@ -83,30 +83,13 @@ class User extends Resource
             DateTime::make('注册时间', 'created_at')
                 ->sortable()
                 ->onlyOnIndex(),
-//            RouterLink::make('用户详情', 'id')
-//                ->route(
-//                    'users.show',
-//                    [
-//                        'user' => $this->id
-//                    ]
-//                )
-//                ->onlyOnIndex(),
 
-            Link::make('详情', 'id')
-                ->onlyOnIndex()
-                ->details(
-                    [
-                        'href'   => function () {
-//                            return route('users.show', ['user' => $this->id]);
-                            return env('APP_URL') . '/users/'. $this->id;
-                        },
-                        'text'   => function () {
-                            return '用户详情';
-                        },
-                        'newTab' => true,
-                        'class'  => 'flex-no-shrink ml-auto no-underline dim text-primary font-bold whitespace-no-wrap',
-                    ]
-                ),
+            Text::make(
+                '',
+                function () {
+                    return '<a class="btn btn-default btn-primary" href="' . route('users.show', $this->id) . '" target="_blank">用户详情</a>';
+                }
+            )->asHtml()->onlyOnIndex(),
 
             MorphToMany::make('角色', 'roles', \Vyuldashev\NovaPermission\Role::class)->canSee(
                 function ($request) {

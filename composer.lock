@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4c9bc99d50cc47a625612e026849db7",
+    "content-hash": "624b4806db5bcb8dfe2d76aaff303414",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -548,6 +548,55 @@
                 "wiki": "https://ckeditor.com/docs/ckeditor4/latest/"
             },
             "time": "2021-05-20T12:10:08+00:00"
+        },
+        {
+            "name": "coderello/laravel-nova-lang",
+            "version": "1.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coderello/laravel-nova-lang.git",
+                "reference": "e8293f9819037ed4ea2763f3055626c9c4f52c0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coderello/laravel-nova-lang/zipball/e8293f9819037ed4ea2763f3055626c9c4f52c0a",
+                "reference": "e8293f9819037ed4ea2763f3055626c9c4f52c0a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.5.*|5.6.*|5.7.*|5.8.*|^6.0|^7.0|^8.0",
+                "php": "^7.1|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Coderello\\LaravelNovaLang\\Providers\\LaravelNovaLangServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Coderello\\LaravelNovaLang\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Language support for Laravel Nova.",
+            "keywords": [
+                "lang",
+                "language",
+                "laravel",
+                "nova",
+                "support"
+            ],
+            "support": {
+                "issues": "https://github.com/coderello/laravel-nova-lang/issues",
+                "source": "https://github.com/coderello/laravel-nova-lang/tree/1.7.2"
+            },
+            "time": "2021-02-07T12:48:29+00:00"
         },
         {
             "name": "coroowicaksono/chart-js-integration",
